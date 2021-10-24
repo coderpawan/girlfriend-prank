@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body{
+    overflow-x: hidden;
+    width:100%;
+    height:100%;
+    background: url(space.jpg);
+    background-size: cover;
+}
+.head{
+    position: relative;
+    left: 34%;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: bolder;
+    font-family: cursive;
+    text-shadow: 1px 4px 4px greenyellow;
+    color: red;
+}
+h1{
+    font-size: 70px;
+}
+.rotate{
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    line-height: 70px;
+    height: 70px;
+    margin: 17px;
+    /* font-size: 26px; */
+}
+.rotate span{
+    animation: animate 6s ease infinite;
+    position: relative;
+    
+}
+@keyframes animate{
+    0%{ top: 0;}
+    20%{ top: 0;}
+    25%{ top: -70px;}
+    45%{ top: -70px;}
+    50%{ top: -140px;}
+    70%{ top: -140px;}
+    75%{ top: -210px;}
+    95%{ top: -210px;}
+    100%{ top: -280px;}
+    120%{ top: -280px;}
+    125%{ top: 0;}
+}
+.earth{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+
+}
+.earthLove{
+    position:absolute;
+    top:20%;
+    left:36%;
+    transform:transalate(-50%,-50%) ;
+    width:300px;
+    height:300px;
+    background: url(world\ map.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: 0 0 60px blueviolet;
+    border-radius: 50%;
+    animation: animateEarth 15s linear infinite;
+}
+@keyframes animateEarth{
+    0%{background-position: 0 0;}
+    100%{background-position: -750px 0;}
+}
+.love{
+    transform-style: preserve-3d;
+    animation: animateText 15s linear infinite;
+    position: relative;
+    top: 33px;
+    left: -50px;
+}
+.love span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(209, 250, 132);
+    color: black;
+    font-size: 15px;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    padding: 5px 11px;
+    transform: rotateY(calc(var(--i)*calc(
+360deg / 57))) translateZ(220px);
+border-top: 4px solid red;
+border-bottom: 4px solid red;
+}
+.love span::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background: white;
+    transform: translateZ(-5px);
+}
+@keyframes animateText{
+    0%{
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateY(-30px);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg) translateY(-30px);
+    }
+}
+.button{
+    position: relative;
+    left: 26%;
+    font-size: 35px;
+    padding: 12px 12px;
+    border: 4px solid green;
+    border-radius: 20px;
+    /* background-color: greenyellow */
+    background: linear-gradient(0deg,rgb(173, 248, 88),white);
+}
+.button:hover{
+        background-color: red;
+}
+.lover{
+    position: relative;
+    left: 38%;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: bolder;
+    font-family: 'Dancing Script', cursive;
+    color: rgb(245, 14, 14);
+    top:20px;
+    display: none;
+}
+.prankImg{
+    height: 750px;
+}
+.rotateImg{
+    position: relative;
+    top: 150px;
+    left: 40%;
+    width: 270px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animated 20s linear infinite;
+    display:none;
+}
+@keyframes animated{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.rotateImg span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*72deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004) ;
+}
+.rotateImg span img{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+
+}

@@ -1,0 +1,58 @@
+@media only screen and (max-width:780px){
+    h1{
+        font-size: 40px;
+        position: relative;
+        left: -70px;
+        top: 13px;
+    }
+    .rotate{
+        margin: -7px;
+    }
+    .earthLove{
+        left: 20%;
+        width: 220px;
+        height: 220px;
+    }
+    .love{
+        position: relative;
+        top: -4px;
+        left: 0px;
+    }
+    .love span{
+        transform: rotateY(calc(var(--i)*calc( 
+    360deg / 57))) translateZ(160px);
+    }
+    .button{
+        left: 8%;
+        font-size: 17px;
+        top:-70px;
+    }
+    .lover{
+        position: relative;
+        left: 15%;
+        font-size: 68px;
+    }
+    .rotateImg{
+        width: 150px;
+        height: 200px;
+        position: relative;
+        top: 400px;
+        left:100px;
+    }
+    .manshiImg{
+        height: 1000px;
+    }
+    @keyframes animated{
+        0%{
+            transform: perspective(1000px) rotateX(0deg);
+        }
+        100%{
+            transform: perspective(1000px) rotateX(360deg);
+        }
+    }
+    .rotateImg span{
+        
+        transform: rotateX(calc(var(--i)*72deg)) translateZ(400px);
+        -webkit-box-reflect:unset
+    }
+    }
